@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang-key="site_title"></title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Noto+Sans+TC:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1 class="logo" data-lang-key="brand_name"></h1>
+            <nav>
+                <ul>
+                    <li><a href="#home" data-lang-key="nav_home"></a></li>
+                    <li><a href="#services" data-lang-key="nav_services"></a></li>
+                    <li><a href="#about" data-lang-key="nav_about"></a></li>
+                    <li><a href="#contact" data-lang-key="nav_contact"></a></li>
+                    <li class="cta-button"><a href="#booking" data-lang-key="nav_booking_cta"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2 data-lang-key="hero_title"></h2>
+            <p data-lang-key="hero_subtitle"></p>
+            <a href="#booking" class="btn" data-lang-key="hero_cta"></a>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title" data-lang-key="section_title_services"></h2>
+            <div class="service-grid">
+                <div class="service-item">
+                    <img src="mianbuhuli.png" alt="面部护理">
+                    <h3 data-lang-key="service_face_care_title"></h3>
+                    <p data-lang-key="service_face_care_desc"></p>
+                </div>
+                <div class="service-item">
+                    <img src="shenti.png" alt="身体按摩">
+                    <h3 data-lang-key="service_body_care_title"></h3>
+                    <p data-lang-key="service_body_care_desc"></p>
+                </div>
+                <div class="service-item">
+                    <img src="meijia.png" alt="美甲美睫">
+                    <h3 data-lang-key="service_nail_art_title"></h3>
+                    <p data-lang-key="service_nail_art_desc"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-lang-key="section_title_about"></h2>
+            <p data-lang-key="about_desc"></p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-lang-key="section_title_contact"></h2>
+            <div class="contact-info">
+                <p><strong data-lang-key="contact_address_label"></strong>：<span data-lang-key="contact_address_value"></span></p>
+                <p><strong data-lang-key="contact_phone_label"></strong>：<span data-lang-key="contact_phone_value"></span></p>
+                <p><strong data-lang-key="contact_hours_label"></strong>：<span data-lang-key="contact_hours_value"></span></p>
+            </div>
+            <div class="contact-qr-code">
+                <img src="line.png" alt="LINE QR Code">
+            </div>
+            <div id="booking" class="booking-form">
+                <h3 data-lang-key="booking_title"></h3>
+                <form>
+                    <input type="text" data-lang-key="form_name_placeholder" required>
+                    <input type="tel" data-lang-key="form_phone_placeholder" required>
+                    <select required>
+                        <option value="" data-lang-key="form_select_option_default"></option>
+                        <option value="face" data-lang-key="service_face_care_title"></option>
+                        <option value="body" data-lang-key="service_body_care_title"></option>
+                        <option value="nail" data-lang-key="service_nail_art_title"></option>
+                    </select>
+                    <input type="datetime-local" required>
+                    <button type="submit" class="btn" data-lang-key="form_submit_btn"></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p><span data-lang-key="copyright_text"></span></p>
+        </div>
+    </footer>
+
+    <div class="language-switcher">
+        <button id="lang-tw" class="lang-btn active">台语</button>
+        <button id="lang-jp" class="lang-btn">日语</button>
+    </div>
+
+    <script src="lang.js"></script>
+
+</body>
+</html>

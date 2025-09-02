@@ -1,0 +1,276 @@
+/* 基础样式和字体 */
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 导航栏 */
+.header {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #8A644D; /* 优雅的棕色 */
+    margin: 0;
+}
+
+.header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.header nav ul li {
+    margin-left: 25px;
+}
+
+.header nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.header nav a:hover {
+    color: #8A644D;
+}
+
+.cta-button a {
+    background-color: #8A644D;
+    color: white !important;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button a:hover {
+    background-color: #6a4f3e;
+}
+
+/* 主视觉区 */
+.hero {
+    background: url('https://via.placeholder.com/1920x1080.png?text=Your+Beautiful+Spa+Image') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+    z-index: 1;
+}
+
+.hero h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4em;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.2em;
+}
+
+.btn {
+    background-color: #8A644D;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    margin-top: 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #6a4f3e;
+}
+
+/* 通用区块样式 */
+section {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #555;
+}
+
+/* 服务项目区 */
+.services {
+    background-color: #f9f9f9;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-item {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.service-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.service-item h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* 关于我们区 */
+.about {
+    text-align: center;
+}
+
+/* 联系我们/预约区 */
+.contact {
+    background-color: #f9f9f9;
+}
+
+.contact .container {
+    display: flex;
+    flex-wrap: wrap; /* 允许项目在空间不足时换行 */
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px; /* 项目之间的间距 */
+}
+
+.contact-info, .booking-form {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-qr-code {
+    flex-shrink: 0; /* 防止图片在空间不足时缩小 */
+    text-align: center;
+    align-self: flex-start; /* 将二维码顶部对齐 */
+}
+
+.contact-qr-code img {
+    width: 150px; /* 您可以根据需要调整尺寸 */
+    height: auto;
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.booking-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.booking-form input, .booking-form select, .booking-form button {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.booking-form button.btn {
+    border: none;
+    cursor: pointer;
+}
+
+/* 页脚 */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+/* 添加到 style.css 文件中 */
+
+.language-switcher {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.lang-btn {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #555;
+    transition: all 0.3s ease;
+}
+
+.lang-btn:first-child {
+    border-radius: 5px 0 0 5px;
+}
+
+.lang-btn:last-child {
+    border-radius: 0 5px 5px 0;
+    border-left: none;
+}
+
+.lang-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.lang-btn.active {
+    background-color: #8A644D;
+    color: white;
+    border-color: #8A644D;
+}
