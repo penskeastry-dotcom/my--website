@@ -70,7 +70,7 @@ const translations = {
     }
 };
 
-const defaultLanguage = 'tw'; // 默认语言为台语
+const defaultLanguage = 'jp'; // 默认语言为台语
 let currentLanguage = localStorage.getItem('currentLang') || defaultLanguage;
 
 // 切换语言函数
@@ -112,4 +112,5 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('lang-jp').addEventListener('click', () => {
         setLanguage('jp');
     });
+
 });
