@@ -112,8 +112,9 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('lang-jp').addEventListener('click', () => {
         setLanguage('jp');
     });
+    // 在页面加载后显示语言切换按钮
+    document.querySelector('.language-switcher').classList.remove('hidden-by-default');
 
 });
-// 在页面加载后显示语言切换按钮
-document.querySelector('.language-switcher').classList.remove('hidden-by-default');
+
 
