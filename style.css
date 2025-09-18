@@ -273,4 +273,8 @@ section {
     background-color: #8A644D;
     color: white;
     border-color: #8A644D;
+
+}
+.hidden-by-default {
+    display: none;
 }
