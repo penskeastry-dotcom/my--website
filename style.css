@@ -1,3 +1,76 @@
+/* ---------------------------------------------------- */
+/* 汉堡图标的通用样式 (放在媒体查询外部，靠近您现有的 .header nav ul ) */
+/* ---------------------------------------------------- */
+.menu-toggle {
+    /* 移除浏览器默认按钮样式 */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001; /* 确保它在菜单之上 */
+
+    /* 关键修正：默认在桌面端隐藏 */
+    display: none; 
+}
+
+/* 简单的三条横线图标样式 */
+.icon-bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: #555; /* 颜色与您的导航链接颜色一致 */
+    transition: all 0.3s ease;
+}
+
+
+/* ---------------------------------------------------- */
+/* 手机端覆盖样式 (小于等于 768px 时) */
+/* ---------------------------------------------------- */
+@media (max-width: 768px) {
+    
+    /* 1. 隐藏桌面导航列表（覆盖您原有的 display: flex;） */
+    .header nav ul {
+        display: none; 
+        
+        /* 布局：让菜单展开时垂直铺满 */
+        position: absolute;
+        top: 100%; /* 放在 .header 的下方 */
+        left: 0;
+        width: 100%;
+        height: auto; /* 高度自适应内容 */
+        background-color: #fff; 
+        flex-direction: column; /* 展开后变垂直排列 */
+        z-index: 999;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* 2. 显示汉堡图标 */
+    .menu-toggle {
+        display: block; 
+    }
+    
+    /* 3. 菜单激活状态：通过 JS 添加 .active 类来显示菜单 */
+    #main-nav-list.active {
+        display: flex; /* 展开菜单 */
+    }
+
+    /* 4. 导航项：保证日文长文字清晰横排 */
+    #main-nav-list li {
+        margin-left: 0; /* 清除桌面端的左侧边距 */
+        width: 100%;
+        border-bottom: 1px solid #eee; /* 增加分隔线 */
+    }
+
+    #main-nav-list a {
+        display: block;
+        padding: 15px 20px;
+        text-align: center;
+        /* 强制横排，避免日文文字变竖排 */
+        writing-mode: horizontal-tb; 
+    }
+}
+
 /* 基础样式和字体 */
 body {
     font-family: 'Noto Sans TC', sans-serif;
@@ -278,3 +351,4 @@ section {
 .hidden-by-default {
     display: none;
 }
+
