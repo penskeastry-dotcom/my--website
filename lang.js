@@ -24,7 +24,7 @@ const translations = {
         "contact_address_label": "地址",
         "contact_address_value": "台北市大安区忠孝東路四段216巷",
         "contact_phone_label": "電話",
-        "contact_phone_value": "0928-357-987",
+        "contact_phone_value": "0928-357-987 LineID：1088553",
         "contact_hours_label": "營業時間",
         "contact_hours_value": "週一至週五 10:00 - 20:00",
         "booking_title": "線上預約",
@@ -58,7 +58,7 @@ const translations = {
         "contact_address_label": "住所",
         "contact_address_value": "台北市大安区忠孝東路四段216巷",
         "contact_phone_label": "電話番号",
-        "contact_phone_value": "0928-357-987",
+        "contact_phone_value": "0928-357-987 LineID：1088553",
         "contact_hours_label": "営業時間",
         "contact_hours_value": "月～金 10:00 - 20:00",
         "booking_title": "オンライン予約",
@@ -116,5 +116,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.language-switcher').classList.remove('hidden-by-default');
 
 });
+
 
 
