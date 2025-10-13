@@ -1,3 +1,23 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // 1. 获取汉堡菜单按钮元素
+    const toggleButton = document.querySelector('.menu-toggle');
+    // 2. 获取导航列表元素 (使用您在 HTML 中设置的 ID: main-nav-list)
+    const navList = document.getElementById('main-nav-list');
+    
+    // 确保这两个元素都存在于页面上
+    if (toggleButton && navList) {
+        // 监听按钮的点击事件
+        toggleButton.addEventListener('click', function() {
+            // 切换 CSS 类名 'active'。CSS 会根据这个类名来显示/隐藏菜单
+            navList.classList.toggle('active');
+            
+            // 辅助功能 (Accessibility) 优化：切换按钮的展开状态
+            const isExpanded = this.getAttribute('aria-expanded') === 'true' || false;
+            this.setAttribute('aria-expanded', !isExpanded);
+        });
+    }
+});
+
 // 语言包，包含所有文本的翻译
 const translations = {
     "tw": { // 台语
@@ -116,6 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.language-switcher').classList.remove('hidden-by-default');
 
 });
+
 
 
 
