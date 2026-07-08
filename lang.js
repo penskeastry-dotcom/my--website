@@ -77,7 +77,7 @@ const translations = {
         "section_title_contact": "联系我们",
         "contact_address_label": "地址",
         "contact_address_value": "上海市长宁区忠孝东路四段216巷",
-        "contact_phone_label": "电话",
+        "contact_phone_label": "TG",
         "contact_phone_value": "+852 5948 6027",
         "contact_hours_label": "营业时间",
         "contact_hours_value": "周一至周五 10:00 - 20:00",
